@@ -1,0 +1,149 @@
+
+@font-face {
+    font-family: Arial;
+    src: url(../fonts/Arial.ttf);
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 45%);
+}
+
+.text {
+    /* margin-bottom: 70px; */
+    font-size: 20px;
+}
+
+.text-content {
+    width: 460px;
+    left: 120px;
+}
+
+.slick-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #076BFF;
+    left: 20px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-image: url(../images/right.svg);
+    background-position: center;
+}
+
+.slick-prev:hover,
+.slick-prev:focus {
+    background-repeat: no-repeat;
+    background-image: url(../images/right.svg);
+    background-position: center;
+}
+
+.slick-next:hover,
+.slick-next:focus {
+    background-repeat: no-repeat;
+    background-image: url(../images/left.svg);
+    background-position: center;
+}
+
+.slick-next {
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    border: 1px solid #076BFF;
+    border-radius: 50%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-image: url(../images/left.svg);
+    background-position: center;
+}
+
+.slick-prev:before, .slick-next:before {
+    content: '';
+}
+
+.ui-accordion-content {
+    border: 0;
+}
+
+.ui-accordion-content p{
+    margin: 0;
+}
+
+.ui-state-default {
+    color: #ffffff;
+    background: linear-gradient(360deg, #076BFF 0%, #007BFF 100%);
+}
+
+.ui-accordion .ui-accordion-header {
+    margin: 10px 0 0 0;
+}
+
+.accordion-btn {
+    position: relative;
+}
+
+.accordion-btn::after {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 32px;
+    margin-left: auto;
+    content: " ";
+    background-image: url(../images/accordion-arrow.png);
+    background-repeat: no-repeat;
+    transition: transform .2s ease-in-out;
+}
+
+.accordion-btn:not(.ui-state-active)::after {
+    transform: rotate(-180deg);
+}
+
+.error {
+    color: red;
+}
+
+.message {
+    max-width: 500px;
+    height: 300px;
+    display: none;
+}
+
+.image-popup {
+    cursor: zoom-in;
+}
+
+@media screen and (max-width: 960px) {
+    .active-button {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .text-content {
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+    .slide-btn {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .accordion-btn::after {
+        display: none;
+    }
+
+    .title {
+        margin-bottom: 20px;
+    }
+
+    .text {
+        display: none;
+    }
+}
